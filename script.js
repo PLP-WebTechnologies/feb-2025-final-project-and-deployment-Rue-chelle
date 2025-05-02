@@ -30,3 +30,30 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// contact form validation 
+
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const name = this.name.value.trim();
+  const email = this.email.value.trim();
+  const message = this.message.value.trim();
+  const successMessage = document.getElementById('successMessage');
+
+  if (!name || !email || !message) {
+    alert('Please fill out all required fields.');
+    return;
+  }
+
+  // Display success message with animation
+  successMessage.classList.remove('hidden');
+
+  // Clear form
+  this.reset();
+
+  // Hide message after 4 seconds
+  setTimeout(() => {
+    successMessage.classList.add('hidden');
+  }, 4000);
+});
