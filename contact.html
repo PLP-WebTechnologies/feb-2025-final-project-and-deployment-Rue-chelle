@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – Alora Jewelry</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Dark mode toggle -->
+  <button id="darkToggle">Toggle Dark Mode</button>
+
+  <!-- Header -->
+  <header>
+    <h1>Alora Jewelry</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <p>We'd love to hear from you! Fill out the form below or reach us via our social channels.</p>
+    
+    <form id="contactForm">
+      <label for="name">Name*</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email*</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message*</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Optional Map or Contact Info -->
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i> info@alorajewelry.com</p>
+      <p><i class="fas fa-phone"></i> +263 771 234 567</p>
+   <!-- Success Message Placeholder -->
+<div id="successMessage" class="success-message hidden">
+  <i class="fa-solid fa-circle-check"></i> Your message has been sent!
+</div>
+    </div>
+<!-- Social Media Links -->
+<div class="social-links">
+  <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
+</div>
+ 
+    
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Alora Jewelry. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
