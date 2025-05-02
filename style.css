@@ -1,0 +1,119 @@
+/* Base Styles */
+:root {
+  --primary-color: #8e44ad;
+  --secondary-color: #f3f3f3;
+  --text-color: #333;
+  --bg-color: #ffffff;
+  --accent-color: #d1c4e9;
+
+  /* Dark mode variables */
+  --bg-dark: #121212;
+  --text-dark: #e0e0e0;
+  --secondary-dark: #1f1f1f;
+}
+
+/* Reset and typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  background-color: var(--secondary-color);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+nav a {
+  font-weight: bold;
+}
+nav a.active {
+  color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: var(--accent-color);
+}
+.hero h2 {
+  font-size: 2.5rem;
+}
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 30px;
+}
+
+/* Featured Products */
+.featured-products {
+  padding: 2rem;
+  text-align: center;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.product-card {
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.product-card h4 {
+  margin-top: 0.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  font-size: 0.9rem;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode .product-card {
+  background-color: var(--secondary-dark);
+}
+body.dark-mode .cta-button {
+  background-color: #bb86fc;
+}
