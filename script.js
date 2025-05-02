@@ -20,3 +20,13 @@ window.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('dark-mode');
   }
 });
+// Like button toggle
+  document.querySelectorAll('.like-button').forEach(button => {
+    button.addEventListener('click', () => {
+      button.classList.toggle('liked');
+      const icon = button.querySelector('i');
+      icon.classList.toggle('fa-regular');
+      icon.classList.toggle('fa-solid');
+    });
+  });
+});
