@@ -130,3 +130,86 @@ body.dark-mode .cta-button {
 .like-button.liked i {
   color: red;
 }
+
+/* Success Message */
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid #c3e6cb;
+  animation: fadeIn 0.6s ease forwards;
+}
+.hidden {
+  display: none;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.contact-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: left;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section label {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.contact-section input,
+.contact-section textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-section button[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.7rem;
+  background-color: #800080;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-section button:hover {
+  background-color: #a64ca6;
+}
+
+.contact-info {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+
+
+/* Social Icons */
+.social-links {
+  margin-top: 2rem;
+  text-align: center;
+}
+.social-links a {
+  margin: 0 0.5rem;
+  font-size: 1.4rem;
+  color: #800080;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.social-links a:hover {
+  color: #a64ca6;
+  transform: scale(1.2);
+}
