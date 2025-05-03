@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jewelry Collection</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Our Collection</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="collection.html">Collection</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="products">
+    <div class="product-card">
+      <img src="images/necklace.jpg" alt="Gold Necklace">
+      <h3>Gold Necklace</h3>
+      <p>$299</p>
+      <button onclick="viewProduct('gold-necklace')">View</button>
+      <button class="like-btn" onclick="toggleLike(this)">&#10084;</button>
+    </div>
+    <div class="product-card">
+      <img src="images/earrings.jpg" alt="Diamond Earrings">
+      <h3>Diamond Earrings</h3>
+      <p>$399</p>
+      <button onclick="viewProduct('diamond-earrings')">View</button>
+      <button class="like-btn" onclick="toggleLike(this)">&#10084;</button>
+    </div>
+    <div class="product-card">
+      <img src="images/bracelet.jpg" alt="Elegant Bracelet">
+      <h3>Elegant Bracelet</h3>
+      <p>$199</p>
+      <button onclick="viewProduct('elegant-bracelet')">View</button>
+      <button class="like-btn" onclick="toggleLike(this)">&#10084;</button>
+    </div>
+    <div class="product-card">
+      <img src="images/ring.jpg" alt="Pearl Ring">
+      <h3>Pearl Ring</h3>
+      <p>$159</p>
+      <button onclick="viewProduct('pearl-ring')">View</button>
+      <button class="like-btn" onclick="toggleLike(this)">&#10084;</button>
+    </div>
+  </section>
+</body>
+</html>
