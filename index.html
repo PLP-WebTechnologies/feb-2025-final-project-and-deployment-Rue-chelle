@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jewelry Store - Home</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="style.css" />
   <script defer src="js/script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
   <header>
@@ -36,21 +38,30 @@
       <h3>Diamond Earrings</h3>
       <p>$399</p>
       <button onclick="viewProduct('diamond-earrings')">View</button>
-      <button class="like-btn" onclick="toggleLike(this)">&#10084;</button>
+      
+<button class="like-btn" onclick="toggleLike(this)">
+  <i class="fa-regular fa-heart"></i>
+</button>
     </div>
     <div class="product-card">
       <img src="images/bracelet.jpg" alt="Elegant Bracelet">
       <h3>Elegant Bracelet</h3>
       <p>$199</p>
       <button onclick="viewProduct('elegant-bracelet')">View</button>
-      <button class="like-btn" onclick="toggleLike(this)">&#10084;</button>
+      
+      <button class="like-btn" onclick="toggleLike(this)">
+  <i class="fa-regular fa-heart"></i>
+</button>
     </div>
     <div class="product-card">
       <img src="images/ring.jpg" alt="Pearl Ring">
       <h3>Pearl Ring</h3>
       <p>$159</p>
       <button onclick="viewProduct('pearl-ring')">View</button>
-      <button class="like-btn" onclick="toggleLike(this)">&#10084;</button>
+      
+<button class="like-btn" onclick="toggleLike(this)">
+  <i class="fa-regular fa-heart"></i>
+</button>
     </div>
   </section>
 </body>
