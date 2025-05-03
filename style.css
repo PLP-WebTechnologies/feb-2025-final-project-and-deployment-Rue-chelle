@@ -282,7 +282,7 @@ footer {
   animation-play-state: paused;
 }
 
-.product-card {
+.featured-card {
   flex: 0 0 auto;
   width: 180px;
   height: 220px;
