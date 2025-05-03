@@ -1,13 +1,27 @@
-/* Reset and base styles */
+/* Base colors */
 body {
+  background-color: #f8e1e7;
+  color: #3d3d3d;
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #fdfdfd;
-  color: #333;
+}
+
+html, body {
+  height: 100%;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 header {
-  background-color: #1a1a1a;
+  background-color: #5a3e42;
   color: #fff;
   padding: 1rem;
   text-align: center;
@@ -21,9 +35,9 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
+  color: #fcd3da;
 }
 
-/* Hero Section */
 .hero {
   background: url('../images/hero.jpg') no-repeat center center/cover;
   padding: 4rem 1rem;
@@ -36,7 +50,6 @@ nav a:hover {
   margin-bottom: 0.5rem;
 }
 
-/* Product Cards */
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -47,7 +60,7 @@ nav a:hover {
 
 .product-card {
   background: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #c08081;
   border-radius: 10px;
   width: 250px;
   padding: 1rem;
@@ -70,51 +83,26 @@ nav a:hover {
   border: none;
   cursor: pointer;
   border-radius: 6px;
-  background-color: #333;
+  background-color: #c08081;
   color: #fff;
   transition: background 0.3s;
 }
 
 .product-card button:hover {
-  background-color: #555;
+  background-color: #a96a6a;
 }
 
-/* Like button styling */
 .like-btn i {
   font-size: 1.2rem;
   transition: color 0.3s;
 }
 
 .liked {
-  color: red;
-}
-
-/* Contact Form */
-.contact form {
-  max-width: 500px;
-  margin: 2rem auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact input, .contact textarea {
-  padding: 0.7rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.contact button {
-  width: fit-content;
-  padding: 0.6rem 1.2rem;
-  background-color: #1a1a1a;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
+  color: #d94f63;
 }
 
 footer {
-  background-color: #1a1a1a;
+  background-color: #5a3e42;
   color: #fff;
   text-align: center;
   padding: 1.5rem 1rem;
@@ -137,11 +125,32 @@ footer {
 }
 
 .social-icons a:hover {
-  color: #f8c291;
+  color: #fcd3da;
 }
 
+.contact form {
+  max-width: 500px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
-/* Responsive Design */
+.contact input, .contact textarea {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact button {
+  width: fit-content;
+  padding: 0.6rem 1.2rem;
+  background-color: #c08081;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
 @media (max-width: 768px) {
   .products {
     flex-direction: column;
