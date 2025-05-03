@@ -65,14 +65,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 // featured products slide effect
-window.addEventListener("DOMContentLoaded", () => {
+
+document.addEventListener("DOMContentLoaded", () => {
   const wrapper = document.getElementById("scrolling-wrapper");
   const cards = Array.from(wrapper.children);
 
-  // Clone all cards and append
+  // Duplicate the content to simulate infinite scroll
   cards.forEach(card => {
     const clone = card.cloneNode(true);
     wrapper.appendChild(clone);
   });
 });
-
