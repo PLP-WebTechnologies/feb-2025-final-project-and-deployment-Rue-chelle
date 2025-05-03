@@ -1,59 +1,66 @@
-// Select the dark mode toggle button
-const toggleBtn = document.getElementById('darkToggle');
+// Like button toggle using Font Awesome icons
+function toggleLike(btn) {
+  const icon = btn.querySelector('i');
+  icon.classList.toggle('fa-regular');
+  icon.classList.toggle('fa-solid');
+  icon.classList.toggle('liked');
+}
 
-// Listen for clicks and toggle 'dark-mode' class on body
-toggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
+// Navigate to dynamic product page with ID
+function viewProduct(productId) {
+  window.location.href = `product.html?id=${productId}`;
+}
 
-  // Optionally store user's preference in localStorage
-  if (document.body.classList.contains('dark-mode')) {
-    localStorage.setItem('theme', 'dark');
-  } else {
-    localStorage.setItem('theme', 'light');
+// Dynamically load product details
+document.addEventListener("DOMContentLoaded", () => {
+  const detailContainer = document.getElementById("product-detail");
+  if (detailContainer) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get("id");
+
+    const products = {
+      "gold-necklace": {
+        name: "Gold Necklace",
+        price: "$299",
+        description: "A luxurious handcrafted 24K gold necklace.",
+        image: "images/necklace.jpg"
+      },
+      "diamond-earrings": {
+        name: "Diamond Earrings",
+        price: "$399",
+        description: "Elegant diamond earrings for timeless beauty.",
+        image: "images/earrings.jpg"
+      },
+      "elegant-bracelet": {
+        name: "Elegant Bracelet",
+        price: "$199",
+        description: "A fine bracelet to add charm to your wrist.",
+        image: "images/bracelet.jpg"
+      },
+      "pearl-ring": {
+        name: "Pearl Ring",
+        price: "$159",
+        description: "Classic pearl ring for a sophisticated look.",
+        image: "images/ring.jpg"
+      }
+    };
+
+    const product = products[productId];
+
+    if (product) {
+      detailContainer.innerHTML = `
+        <div class="product-card">
+          <img src="${product.image}" alt="${product.name}">
+          <h3>${product.name}</h3>
+          <p>${product.price}</p>
+          <p>${product.description}</p>
+          <button class="like-btn" onclick="toggleLike(this)">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+      `;
+    } else {
+      detailContainer.innerHTML = `<p>Product not found.</p>`;
+    }
   }
-});
-
-// Apply saved theme preference on page load
-window.addEventListener('DOMContentLoaded', () => {
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
-    document.body.classList.add('dark-mode');
-  }
-});
-// Like button toggle
-  document.querySelectorAll('.like-button').forEach(button => {
-    button.addEventListener('click', () => {
-      button.classList.toggle('liked');
-      const icon = button.querySelector('i');
-      icon.classList.toggle('fa-regular');
-      icon.classList.toggle('fa-solid');
-    });
-  });
-});
-
-// contact form validation 
-
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-
-  const name = this.name.value.trim();
-  const email = this.email.value.trim();
-  const message = this.message.value.trim();
-  const successMessage = document.getElementById('successMessage');
-
-  if (!name || !email || !message) {
-    alert('Please fill out all required fields.');
-    return;
-  }
-
-  // Display success message with animation
-  successMessage.classList.remove('hidden');
-
-  // Clear form
-  this.reset();
-
-  // Hide message after 4 seconds
-  setTimeout(() => {
-    successMessage.classList.add('hidden');
-  }, 4000);
 });
