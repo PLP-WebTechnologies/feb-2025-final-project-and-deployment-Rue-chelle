@@ -235,6 +235,7 @@ footer {
   margin-top: 1.5rem;
 }
 
+
 .collection-card {
   background: #fff;
   border-radius: 10px;
@@ -247,6 +248,58 @@ footer {
   max-width: 100%;
   border-radius: 8px;
 }
+.featured-products {
+  padding: 2rem;
+  background-color: #fce8ed;
+  text-align: center;
+}
+
+.featured-products h2 {
+  color: #5a3e42;
+  margin-bottom: 1rem;
+}
+
+.scrolling-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  animation: scroll-horizontal 20s linear infinite;
+}
+
+.product-card {
+  min-width: 200px;
+  margin: 0 1rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 0 0 auto;
+}
+
+/* Hide scrollbar */
+.scrolling-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.scrolling-wrapper {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: scroll-horizontal 30s linear infinite;
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+/*testimonials section*/
 .testimonials {
   padding: 2rem;
   background-color: #fff;
