@@ -173,6 +173,25 @@ footer {
   border-radius: 5px;
 }
 
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Apply animation to product detail */
+.product-detail {
+  animation: fadeIn 0.8s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Subtle hover effect */
+.product-detail:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 768px) {
   .products {
     flex-direction: column;
