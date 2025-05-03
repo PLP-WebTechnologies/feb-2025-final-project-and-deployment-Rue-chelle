@@ -101,6 +101,28 @@ nav a:hover {
   color: #d94f63;
 }
 
+/* Single product detail */
+.product-detail {
+  max-width: 700px;
+  margin: 3rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-detail img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.product-detail h2 {
+  font-size: 2rem;
+  color: #5a3e42;
+}
+
 footer {
   background-color: #5a3e42;
   color: #fff;
@@ -159,6 +181,11 @@ footer {
 
   .hero h2 {
     font-size: 2rem;
+  }
+
+  .product-detail {
+    margin: 2rem 1rem;
+    padding: 1rem;
   }
 }
 
