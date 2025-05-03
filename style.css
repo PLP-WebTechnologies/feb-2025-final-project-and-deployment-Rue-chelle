@@ -249,9 +249,12 @@ footer {
   border-radius: 8px;
 }
 .featured-products {
+
+.featured-products {
   padding: 2rem;
   background-color: #fce8ed;
   text-align: center;
+  overflow: hidden;
 }
 
 .featured-products h2 {
@@ -261,33 +264,31 @@ footer {
 
 .scrolling-wrapper {
   display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  animation: scroll-horizontal 20s linear infinite;
+  width: max-content;
+  animation: scroll-horizontal 30s linear infinite;
 }
 
 .product-card {
-  min-width: 200px;
+  flex: 0 0 auto;
+  width: 200px;
   margin: 0 1rem;
   padding: 1rem;
   background-color: #fff;
   border-radius: 10px;
+  text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  flex: 0 0 auto;
 }
 
-/* Hide scrollbar */
+/* Remove scrollbar */
 .scrolling-wrapper::-webkit-scrollbar {
   display: none;
 }
-
 .scrolling-wrapper {
-  display: flex;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: scroll-horizontal 30s linear infinite;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
+/* Animation */
 @keyframes scroll-horizontal {
   0% {
     transform: translateX(0);
@@ -296,6 +297,7 @@ footer {
     transform: translateX(-50%);
   }
 }
+
 
 
 
