@@ -2,50 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us</title>
-  <link rel="stylesheet" href="style.css" />
-   <script defer src="script.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Jewelry Boutique</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="script.js" defer></script>
 </head>
 <body>
- <div class="page-wrapper">
-  <header>
-    <h1>Contact Us</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="collection.html">Collection</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <div class="page-wrapper">
+    <header>
+      <h1>Jewelry Boutique</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
 
-  <section class="contact">
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+    <main class="contact">
+      <h2>Get in Touch</h2>
+      <p>If you have any questions, custom orders, or need assistance, feel free to reach out.</p>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required/>
+        <input type="email" name="email" placeholder="Your Email" required/>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
+      <div class="contact-details">
+        <h3>Our Boutique</h3>
+        <p>123 Glamour Lane, Harare, Zimbabwe</p>
+        <p>Email: info@jewelryboutique.com</p>
+        <p>Phone: +263 77 000 1234</p>
+      </div>
+    </main>
 
-      <button type="submit">Send</button>
-    </form>
-  </section>
-  
-<footer>
-  <div class="footer-content">
-    <p>&copy; 2025 Alora Jewelry. All rights reserved.</p>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-    </div>
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 Jewelry Boutique. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </footer>
   </div>
-</footer>
- </div>
 </body>
 </html>
-
