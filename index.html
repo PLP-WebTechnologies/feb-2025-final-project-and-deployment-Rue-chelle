@@ -3,60 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alora Jewelry</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Jewelry Store - Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
 </head>
 <body>
-  <!-- Dark mode toggle button -->
-  <button id="darkToggle">Toggle Dark Mode</button>
-
-  <!-- Site Header -->
   <header>
-    <h1>Alora Jewelry</h1>
+    <h1>Jewelry Store</h1>
     <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="products.html">Shop</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="collection.html">Collection</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
-    <h2>Elegance in Every Detail</h2>
-    <p>Discover handcrafted pieces made to shine.</p>
-    <a href="products.html" class="cta-button">Shop Now</a>
+    <h2>Elegant. Timeless. Yours.</h2>
+    <p>Discover the beauty of fine jewelry.</p>
   </section>
 
-  <!-- Featured Products Section -->
-  <section class="featured-products">
-    <h3>Featured Collections</h3>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="images/earrings.jpg" alt="Gold Earrings">
-        <h4>Gold Earrings</h4>
-        <p>$120</p>
-      </div>
-      <div class="product-card">
-        <img src="images/necklace.jpg" alt="Diamond Necklace">
-        <h4>Diamond Necklace</h4>
-        <p>$350</p>
-      </div>
-      <div class="product-card">
-        <img src="images/ring.jpg" alt="Emerald Ring">
-        <h4>Emerald Ring</h4>
-        <p>$200</p>
-      </div>
+  <section class="products">
+    <div class="product-card">
+      <img src="images/necklace.jpg" alt="Gold Necklace">
+      <h3>Gold Necklace</h3>
+      <p>$299</p>
+      <button onclick="viewProduct('gold-necklace')">View</button>
+      <button class="like-btn" onclick="toggleLike(this)">&#10084;</button>
+    </div>
+    <div class="product-card">
+      <img src="images/earrings.jpg" alt="Diamond Earrings">
+      <h3>Diamond Earrings</h3>
+      <p>$399</p>
+      <button onclick="viewProduct('diamond-earrings')">View</button>
+      <button class="like-btn" onclick="toggleLike(this)">&#10084;</button>
+    </div>
+    <div class="product-card">
+      <img src="images/bracelet.jpg" alt="Elegant Bracelet">
+      <h3>Elegant Bracelet</h3>
+      <p>$199</p>
+      <button onclick="viewProduct('elegant-bracelet')">View</button>
+      <button class="like-btn" onclick="toggleLike(this)">&#10084;</button>
+    </div>
+    <div class="product-card">
+      <img src="images/ring.jpg" alt="Pearl Ring">
+      <h3>Pearl Ring</h3>
+      <p>$159</p>
+      <button onclick="viewProduct('pearl-ring')">View</button>
+      <button class="like-btn" onclick="toggleLike(this)">&#10084;</button>
     </div>
   </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Alora Jewelry. All rights reserved.</p>
-  </footer>
-
-  <!-- JS for dark mode -->
-  <script src="script.js"></script>
 </body>
 </html>
