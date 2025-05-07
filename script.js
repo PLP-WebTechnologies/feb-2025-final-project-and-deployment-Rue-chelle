@@ -1,9 +1,9 @@
 // Like button toggle using Font Awesome icons
 function toggleLike(btn) {
-  const icon = btn.querySelector('i');
-  icon.classList.toggle('fa-regular');
-  icon.classList.toggle('fa-solid');
-  icon.classList.toggle('liked');
+  const icon = btn.querySelector("i");
+  icon.classList.toggle("fa-regular");
+  icon.classList.toggle("fa-solid");
+  icon.classList.toggle("liked");
 }
 
 // Navigate to dynamic product page with ID
@@ -23,26 +23,26 @@ document.addEventListener("DOMContentLoaded", () => {
         name: "Gold Necklace",
         price: "$299",
         description: "A luxurious handcrafted 24K gold necklace.",
-        image: "images/necklace.jpg"
+        image: "images/necklace.jpg",
       },
-      "diamond-earrings": {
-        name: "Diamond Earrings",
+      "gold-bracelet": {
+        name: "Golden Bracelet",
         price: "$399",
-        description: "Elegant diamond earrings for timeless beauty.",
-        image: "images/earrings.jpg"
+        description: "Elegant golden bracelet for timeless beauty.",
+        image: "images/let.jpg",
       },
       "elegant-bracelet": {
         name: "Elegant Bracelet",
         price: "$199",
         description: "A fine bracelet to add charm to your wrist.",
-        image: "images/bracelet.jpg"
+        image: "images/bracelet.jpg",
       },
-      "pearl-ring": {
-        name: "Pearl Ring",
+      rings: {
+        name: "Ring Collection",
         price: "$159",
-        description: "Classic pearl ring for a sophisticated look.",
-        image: "images/ring.jpg"
-      }
+        description: "Classic rings for a sophisticated look.",
+        image: "images/rings.jpg",
+      },
     };
 
     const product = products[productId];
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cards = Array.from(wrapper.children);
 
   // Duplicate the content to simulate infinite scroll
-  cards.forEach(card => {
+  cards.forEach((card) => {
     const clone = card.cloneNode(true);
     wrapper.appendChild(clone);
   });
