@@ -37,11 +37,42 @@ document.addEventListener("DOMContentLoaded", () => {
         description: "A fine bracelet to add charm to your wrist.",
         image: "images/bracelet.jpg",
       },
+      brace: {
+        name: "LV Bracelet",
+        price: "$199",
+        description: "A fine bracelet to add charm to your wrist.",
+        image: "images/brace.jpg",
+      },
       rings: {
         name: "Ring Collection",
         price: "$159",
         description: "Classic rings for a sophisticated look.",
         image: "images/rings.jpg",
+      },
+      "gold-ring": {
+        name: "Golden Ring",
+        price: "$300",
+        description: "Elegant golden ring for timeless beauty.",
+        image: "images/riing.jpg",
+      },
+      ringset: {
+        name: "Ring Set",
+        price: "$159",
+        description: "Classic rings for a sophisticated look.",
+        image: "images/ring.jpg",
+      },
+      "diamond-earrings": {
+        name: "Diamond Earrings",
+        price: "$699",
+        description: "Precious rocks just for you.",
+        image: "images/picc.jpg",
+      },
+
+      "jewel-set": {
+        name: "Jewel Set",
+        price: "$400",
+        description: "Stunning Jewllery set for a stunning lady.",
+        image: "images/set.jpg",
       },
     };
 
