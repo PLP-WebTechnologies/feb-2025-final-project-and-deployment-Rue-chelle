@@ -358,6 +358,18 @@ footer {
     width: 100%; /* Make buttons take full width */
     padding: 0.5rem; /* Adjust padding for smaller screens */
   }
+   .contact-details {
+    margin-top: 1.5rem;
+    padding: 0 1rem; /* Add padding for better spacing on smaller screens */
+  }
+
+  .contact-details h3 {
+    font-size: 1.2rem; /* Reduce heading size */
+  }
+
+  .contact-details p {
+    font-size: 0.9rem; /* Reduce paragraph font size */
+  }
 }
 @media (max-width: 480px) {
   .product-card {
@@ -392,6 +404,19 @@ footer {
     padding: 0.4rem; /* Adjust padding for smaller screens */
     font-size: 0.85rem; /* Slightly smaller button text */
   }
+  .contact-details {
+    margin-top: 1rem;
+    padding: 0 0.5rem; /* Further reduce padding for very small screens */
+  }
+
+  .contact-details h3 {
+    font-size: 1rem; /* Further reduce heading size */
+  }
+
+  .contact-details p {
+    font-size: 0.85rem; /* Further reduce paragraph font size */
+  }
+}
 }
 
 /* Scroll animation */
