@@ -88,6 +88,19 @@ margin: 0 auto 10px;
 .product-card h3 {
   margin: 0.5rem 0;
 }
+.product-card .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.product-card .buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
 .product-card button {
   margin: 0.3rem;
@@ -321,12 +334,63 @@ footer {
   transform: scale(1.05);
 }
 
-/* Responsive Cards */
 @media (max-width: 600px) {
   .product-card {
-    width: 140px;
-    height: 180px;
+    width: 80%; /* Use a percentage to make it responsive */
+    height: auto; /* Allow height to adjust dynamically */
     font-size: 0.9rem;
+    padding: 1rem; /* Ensure padding is consistent */
+  }
+
+  .product-card img {
+    max-width: 100%;
+    height: auto; /* Ensure the image scales properly */
+    margin-bottom: 0.5rem;
+  }
+
+  .product-card .buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 0.75rem;
+    margin-top: 1rem; /* Add spacing above buttons */
+  }
+
+  .product-card .buttons button {
+    width: 100%; /* Make buttons take full width */
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+  }
+}
+@media (max-width: 480px) {
+  .product-card {
+    width: 95%; /* Take up most of the screen width */
+    padding: 0.8rem; /* Reduce padding for smaller screens */
+    font-size: 0.85rem; /* Slightly smaller font size */
+    margin: 0.5rem auto; /* Add spacing between cards */
+  }
+
+  .product-card img {
+    max-width: 100%;
+    height: auto; /* Ensure the image scales properly */
+    margin-bottom: 0.5rem;
+  }
+
+  .product-card h3 {
+    font-size: 1rem; /* Adjust heading size */
+  }
+
+  .product-card p {
+    font-size: 0.9rem; /* Adjust paragraph size */
+  }
+
+  .product-card .buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 0.5rem; /* Reduce gap between buttons */
+    margin-top: 0.8rem; /* Adjust spacing above buttons */
+  }
+
+  .product-card .buttons button {
+    width: 100%; /* Make buttons take full width */
+    padding: 0.4rem; /* Adjust padding for smaller screens */
+    font-size: 0.85rem; /* Slightly smaller button text */
   }
 }
 
