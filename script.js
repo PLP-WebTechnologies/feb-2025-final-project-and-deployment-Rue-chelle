@@ -1,3 +1,11 @@
+// Select the hamburger button and navigation
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+// Toggle the "show" class on the nav when the hamburger is clicked
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
 // Like button toggle using Font Awesome icons
 function toggleLike(btn) {
   const icon = btn.querySelector("i");
@@ -108,18 +116,19 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.getElementById("contact-form").addEventListener("submit", function (event) {
-  // Get form data
-  const name = event.target.name.value;
-  const email = event.target.email.value;
-  const message = event.target.message.value;
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (event) {
+    // Get form data
+    const name = event.target.name.value;
+    const email = event.target.email.value;
+    const message = event.target.message.value;
 
-  //  Log the data to the console
-  console.log("Name:", name);
-  console.log("Email:", email);
-  console.log("Message:", message);
+    //  Log the data to the console
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Message:", message);
 
-  //  Display a success message 
-  alert("Thank you for your message! We will get back to you soon😊.");
-
-});
+    //  Display a success message
+    alert("Thank you for your message! We will get back to you soon😊.");
+  });

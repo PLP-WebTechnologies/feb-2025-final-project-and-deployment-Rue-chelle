@@ -21,28 +21,79 @@ main {
 }
 
 header {
-  background-color: #5a3e42;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
+  display: flex; /* Use Flexbox for layout */
+  justify-content: space-between; /* Push h1 to the left and nav to the right */
+  align-items: center; /* Vertically center the items */
+  padding: 1rem; /* Add some padding for spacing */
+  position: absolute; /* Position the header at the top of the page */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure the header spans the full width of the page */
+  box-sizing: border-box; 
+  z-index: 10;
+  margin-bottom: 5rem;
+ 
+
+}
+header + .hero {
+  margin-top: 5rem; /* Add space below the header */
+}
+header h1{
+  font-size: 1.5rem;
+  color: #6b464c;
+  font-family: 'JetBrainsMono';
+  margin: 0;
+}
+nav {
+  margin: 0;
+  display: flex;
+  gap: 1rem;
 }
 
 nav a {
   margin: 0 1rem;
-  color: #fff;
+  color:#6b464c;
+  font-weight: 700;
   text-decoration: none;
 }
 
 nav a:hover {
   text-decoration: underline;
-  color: #fcd3da;
+  color: #fff;
+}
+nav a.active {
+  color: #fff; /* Highlight the active link */
+  background-color: #6b464c; 
+  padding: 0.2rem 1rem; 
+  border-radius: 5px;
+}
+.hamburger {
+  display: none; /* Hidden by default */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
 }
 
 .hero {
+  position: relative; 
   background: url('../images/hero.jpg') no-repeat center center/cover;
   padding: 4rem 1rem;
   text-align: center;
   color: #fff;
+  z-index: 1;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(226, 164, 164, 0.1); 
+  z-index: -1; /* Place the overlay behind the content */
+  margin-top: 0; 
 }
 
 .hero h2 {
@@ -55,15 +106,56 @@ nav a:hover {
   color: #6b464c;
   font-family:Georgia, 'Times New Roman', Times, serif
 }
+/* Button styles */
+.btn-shop {
+  display: inline-block; /* Make it behave like a button */
+  background-color: #6b464c; /* Button background color */
+  color: #fff; 
+  text-decoration: none; 
+  padding: 0.75rem 1.5rem; 
+  font-size: 1rem; 
+  font-weight: bold; 
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+/* Hover effect */
+.btn-shop:hover {
+  background-color: #fcd3da; /* Lighter background on hover */
+  color: #6b464c; /* Darker text on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Optional: Add focus styles for accessibility */
+.btn-shop:focus {
+  outline: 2px solid #fcd3da; /* Highlight the button on focus */
+  outline-offset: 2px;
+}
 
 .products {
+  margin-top: 6rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
   padding: 2rem;
 }
-
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700; 
+  color: #6b464c; 
+  margin-bottom: 1rem; 
+  text-transform: uppercase; 
+}
+.productss {
+  display: flex; /* Flexbox for layout */
+  flex-wrap: wrap; /* Allow wrapping of product cards */
+  gap: 1.5rem; /* Space between product cards */
+  justify-content: center; /* Center the product cards */
+  padding: 2rem;
+}
 
 .product-card {
   background: #fff;
@@ -149,11 +241,15 @@ margin: 0 auto 10px;
 }
 
 footer {
-  background-color: #5a3e42;
-  color: #fff;
-  text-align: center;
-  padding: 1.5rem 1rem;
-  margin-top: 3rem;
+  background-color: #6b464c; /* Footer background color */
+  color: #fff; /* Text color */
+  text-align: center; /* Center-align text */
+  padding: 1.5rem 1rem; /* Add padding for spacing */
+  font-size: 0.9rem; /* Adjust font size */
+}
+
+footer p {
+  margin: 0.5rem 0; /* Add spacing between lines */
 }
 
 .footer-content {
@@ -164,11 +260,12 @@ footer {
 }
 
 .social-icons a {
+  margin-top: 1rem;
   color: #fff;
   margin: 0 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
@@ -419,7 +516,7 @@ footer {
     font-size: 0.85rem; /* Further reduce paragraph font size */
   }
 }
-}
+
 
 /* Scroll animation */
 @keyframes scroll-horizontal {
@@ -499,14 +596,46 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+  header h1{
+    font-size: 1.2rem;
+  }
 
   .hero h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .product-detail {
     margin: 2rem 1rem;
     padding: 1rem;
+  }
+  nav {
+    display: none; /* Hide navigation links by default */
+    flex-direction: column;
+    background-color: #5a3e42;
+    opacity: 0.8;/* Background for the dropdown */
+    position: absolute;
+    top: 100%; /* Position below the header */
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 2rem;
+    box-sizing: border-box;
+    z-index: 100;
+  }
+  nav a {
+    color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem; /* Larger font size for better visibility */
+  margin: 1rem 0; /* Add spacing between links */
+  text-align: center;
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger menu on smaller screens */
+  }
+
+  nav.show {
+    display: flex; /* Show navigation when toggled */
   }
 }
 
