@@ -1,11 +1,21 @@
+// Typed.js Initialization
+var typed = new Typed("#typed", {
+  strings: ["NEW ARRIVALS...", "BEST DEALS...", "LIMITED OFFERS...."],
+  typeSpeed: 50,
+  backSpeed: 70,
+  loop: true,
+});
 // Select the hamburger button and navigation
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 
-// Toggle the "show" class on the nav when the hamburger is clicked
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-});
+if (hamburger && navLinks) {
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+} else {
+  console.error("Hamburger button or nav-links not found in the DOM.");
+}
 // Like button toggle using Font Awesome icons
 function toggleLike(btn) {
   const icon = btn.querySelector("i");
