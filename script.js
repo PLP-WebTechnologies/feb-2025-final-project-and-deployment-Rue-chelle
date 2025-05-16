@@ -1,10 +1,3 @@
-// Typed.js Initialization
-var typed = new Typed("#typed", {
-  strings: ["NEW ARRIVALS...", "BEST DEALS...", "LIMITED OFFERS...."],
-  typeSpeed: 50,
-  backSpeed: 70,
-  loop: true,
-});
 // Select the hamburger button and navigation
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
@@ -14,7 +7,7 @@ if (hamburger && navLinks) {
     navLinks.classList.toggle("show");
   });
 } else {
-  console.error("Hamburger button or nav-links not found in the DOM.");
+  console.error("Hamburger button only available on small screens.");
 }
 // Like button toggle using Font Awesome icons
 function toggleLike(btn) {
